@@ -26,11 +26,8 @@ var app = builder.Build();
 app.UseCors();
 
 // Enable Swagger UI
-if (app.Environment.IsDevelopment())
-{
     app.UseSwagger();
     app.UseSwaggerUI();  
-}
 
 // Define the API endpoints
 //שליפה
@@ -72,4 +69,5 @@ app.MapDelete("/items/{id}" , async(int id ,ToDoDbContext db)=>
     await db.SaveChangesAsync();  
     return Results.Ok(item);  
 });
+app.MapGet("/", () => "Todo List is running..");
 app.Run();
