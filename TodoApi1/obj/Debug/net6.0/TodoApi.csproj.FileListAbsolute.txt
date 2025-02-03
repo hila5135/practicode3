@@ -66,3 +66,5 @@ C:\Users\User\Desktop\practicode3\TodoApi1\obj\Debug\net6.0\refint\TodoApi.dll
 C:\Users\User\Desktop\practicode3\TodoApi1\obj\Debug\net6.0\TodoApi.pdb
 C:\Users\User\Desktop\practicode3\TodoApi1\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
 C:\Users\User\Desktop\practicode3\TodoApi1\obj\Debug\net6.0\ref\TodoApi.dll
+C:\Users\User\Desktop\practicode3\TodoApi1\bin\Debug\net6.0\package-lock.json
+C:\Users\User\Desktop\practicode3\TodoApi1\bin\Debug\net6.0\package.json
