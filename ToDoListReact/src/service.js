@@ -1,16 +1,16 @@
 import axios from 'axios';
-
-const apiUrl = "https://localhost:7083";
-axios.defaults.baseURL = 'https://localhost:7083';  // כתובת ה-API שלך
+const apiUrl = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = apiUrl; 
+console.log("API Base URL:", apiUrl);
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 
 // הוספת interceptor לשגיאות
 axios.interceptors.response.use(
-  response => response, // אם לא הייתה שגיאה, מחזירים את התגובה
+  response => response,
   error => {
     console.error("API Request Error: ", error.response ? error.response.data : error.message);
-    return Promise.reject(error); // מחזירים את השגיאה כדי שנוכל לטפל בה במקום אחר
+    return Promise.reject(error);
   }
 );
 

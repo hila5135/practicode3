@@ -21,6 +21,7 @@ function App() {
   //   await service.setCompleted(todo.id, isComplete);
   //   await getTodos();//refresh tasks list (in order to see the updated one)
   // }
+  console.log(process.env.REACT_APP_API_URL);
   async function updateCompleted(todo, isComplete) {
     await service.setCompleted(todo.id, todo.name, isComplete);  // שולחים את ה-ID, שם וסטטוס ההשלמה
     await getTodos(); //refresh tasks list (in order to see the updated one)
