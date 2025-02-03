@@ -11,7 +11,7 @@ renderApi.auth('rnd_bjNQ7Hz3he3zIx7Nq4QZtsWGeYay');
 renderApi.listServices({includePreviews: 'true', limit: '20'})
   .then(({ data }) => console.log(data))
   .catch(err => console.error(err));
-// Endpoint לשליפת רשימת האפליקציות מה-Render API
+  
 app.get('/services', async (req, res) => {
   try {
     const response = await axios.get('https://api.render.com/v1/services', {
@@ -27,7 +27,5 @@ app.get('/services', async (req, res) => {
 });
 
 app.listen(port, () => {
-//   console.log(`השרת רץ בכתובת http://localhost:${port}`)
-
 console.log("the server is running..............")
 });
