@@ -6,7 +6,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 
 // הוספת interceptor לשגיאות
-axios.interceptors.response.use(  
+axios.interceptors.response.use(
   response => response,
   error => {
     console.error("API Request Error: ", error.response ? error.response.data : error.message);

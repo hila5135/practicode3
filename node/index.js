@@ -4,8 +4,7 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const apiKey = 'rnd_bjNQ7Hz3he3zIx7Nq4QZtsWGeYay'; 
 renderApi.auth('rnd_bjNQ7Hz3he3zIx7Nq4QZtsWGeYay');
@@ -26,6 +25,7 @@ app.get('/services', async (req, res) => {
     res.status(500).json({ message: 'שגיאה בעת בקשת השירותים' });
   }
 });
+
 app.listen(port, () => {
 console.log("the server is running..............")
 });
