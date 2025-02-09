@@ -146,11 +146,4 @@ app.MapDelete("/items/{id}", async (int id, ToDoDbContext db) =>
 
 app.MapGet("/", () => "Todo List is running..");
 
-//lastLevel
-// import renderApi from '@api/render-api';
-
-// renderApi.auth('rnd_bjNQ7Hz3he3zIx7Nq4QZtsWGeYay');
-// renderApi.listServices({includePreviews: 'true', limit: '20'})
-//   .then(({ data }) => console.log(data))
-//   .catch(err => console.error(err));
 app.Run();
